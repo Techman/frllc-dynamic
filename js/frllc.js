@@ -208,7 +208,7 @@ function generatePlayerCard(player, useMainRoster) {
     card_header.setAttribute('class', 'card-header');
     card_header.innerHTML = '<h4 class="my-0 font-weight-normal">' + (useMainRoster ? player.rosterRank : player.infoRank) + '</h4>';
     let card_body = document.createElement('div');
-    card_body.innerHTML = '<h1 class="card-title">' + player.name + '</h1>';
+    card_body.innerHTML = '<h3 class="card-title">' + player.name + '</h1>';
     card_body.innerHTML += '<ul class="list-unstyled mt-3 mb-4"><li>' + (useMainRoster ? responsibilities[player.rosterRank] : responsibilities[player.infoRank]) + '</li></ul>';
     card.appendChild(card_header);
     card.appendChild(card_body);
