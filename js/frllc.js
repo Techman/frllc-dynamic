@@ -297,10 +297,10 @@ function decode(s) {
 }
 
 // Window onload
-window.onload = async () => {
+window.addEventListener('load', async function() {
     await fetchRoster(playerList);
     await fetchInfo(playerList);
     renderPlayerCards(playerList);
     rankCount = getRankCount(playerList);
     renderRankCards(rankCount);
-}
+});
