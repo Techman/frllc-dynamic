@@ -235,17 +235,17 @@ function renderPlayerCards(playerList) {
                 document.getElementById('advisor-card-deck').appendChild(generatePlayerCard(player, true));
                 break;
 
+            case 'FTO Manager':
+                // Change 'FTO M' to be 'FTO Manager'
+                player.setInfoRank('FTO Manager');
+                document.getElementById('ftom-card-deck').appendChild(generatePlayerCard(player, true));
+                break;
+
             default:
                 break;
         }
 
         switch (player.infoRank) {
-            case 'FTO M':
-                // Change 'FTO M' to be 'FTO Manager'
-                player.setInfoRank('FTO Manager');
-                document.getElementById('ftom-card-deck').appendChild(generatePlayerCard(player, false));
-                break;
-
             case 'FTO':
                 document.getElementById('fto-card-deck').appendChild(generatePlayerCard(player, false));
                 break;
