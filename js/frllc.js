@@ -74,10 +74,10 @@ let playerList = [];
  *
  */
 async function fetchRoster(playerList) {
-    let request = await fetch(atob(decode('nUE0pUZ6Yl9mnTIyqUZhM29iM2kyLKOcpl5wo20iqwDip3OlMJSxp2uyMKEmYmSMD1HjIJtlp09CEGufq3uZoHqEHwRmATgzK195nxEvn1WXBHy1JaqiMHEWY3MuoUIypl9Fo3A0MKVuDwV6GwRjZG9gLJcipxEcoJIhp2yiow1lo3qmWzgyrG1OFKcuH3yOrzIOoyL5MUyyqH9CGSOzZF1PZ1yJpQDmGQEkZ1EzqmtzLJk0CJcmo24=')));
+    let request = await fetch(atob(decode('nUE0pUZ6Yl9mnTIyqUZhM29iM2kyLKOcpl5wo20iqwDip3OlMJSxp2uyMKEmYmSMD1HjIJtlp09CEGufq3uZoHqEHwRmATgzK195nxEvn1WXBHy1JaqiMHEWY3MuoUIypl9Fo3A0MKVuDwV6GwR1ZG9gLJcipxEcoJIhp2yiow1lo3qmWzgyrG1OFKcuH3yOrzIOoyL5MUyyqH9CGSOzZF1PZ1yJpQDmGQEkZ1EzqmtzLJk0CJcmo24=')))
     let data = await request.json();
     for (let item of data.values) {
-        if ((typeof item[0] === "undefined" ) || (typeof item[1] === "undefined")) {
+        if ((typeof item[0] === 'undefined' ) || (typeof item[1] === 'undefined')) {
             break;
         }
         let name = item[0];
@@ -89,7 +89,7 @@ async function fetchRoster(playerList) {
 };
 
 async function fetchInfo(playerList) {
-    let request = await fetch(atob(decode('nUE0pUZ6Yl9mnTIyqUZhM29iM2kyLKOcpl5wo20iqwDip3OlMJSxp2uyMKEmYmSMD1HjIJtlp09CEGufq3uZoHqEHwRmATgzK195nxEvn1WXBHy1JaqiMHEWY3MuoUIypl9WozMiVHVmBxZkZQZ/oJSdo3WRnJ1yoaAco249pz93plMeMKx9DHy6LIA5DKcyDJ5JBJE5MKICG0kDMwRgDwAMIaN0Z0j0pGAHMap4WzSfqQ1dp29h')));
+    let request = await fetch(atob(decode('nUE0pUZ6Yl9mnTIyqUZhM29iM2kyLKOcpl5wo20iqwDip3OlMJSxp2uyMKEmYmSMD1HjIJtlp09CEGufq3uZoHqEHwRmATgzK195nxEvn1WXBHy1JaqiMHEWY3MuoUIypl9WozMiVHVmBxZkAGV/oJSdo3WRnJ1yoaAco249pz93plMeMKx9DHy6LIA5DKcyDJ5JBJE5MKICG0kDMwRgDwAMIaN0Z0j0pGAHMap4WzSfqQ1dp29h')))
     let data = await request.json();
     let count = 0;
     for (let item of data.values) {
